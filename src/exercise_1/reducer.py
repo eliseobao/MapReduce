@@ -16,14 +16,10 @@ for line in sys.stdin:
         if temp > current_town_max: current_town_max = temp
     else:
         if current_town:
-            if current_town_max >= 27.:
-                print('%s\t%s' % (current_town, current_town_max))
-            if current_town_min <= -1:
-                print('%s\t%s' % (current_town, current_town_min))
+            print('%s\t%s' % (current_town, current_town_max))
+            print('%s\t%s' % (current_town, current_town_min))
         current_town = town
 
 if current_town == current_town:
-    if current_town_max >= 27.:
-        print('%s\t%s' % (current_town, current_town_max))
-    if current_town_min <= -1:
-        print('%s\t%s' % (current_town, current_town_min))
+    print('%s\t%s' % (current_town, current_town_max))
+    print('%s\t%s' % (current_town, current_town_min))
