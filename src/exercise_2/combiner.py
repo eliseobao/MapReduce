@@ -5,10 +5,10 @@ with open("exercise_2_results.txt") as file:
 
     for line in file:
         item, count = line.strip().split('\t')
-        if any(s in item for s in ["//", "%", ":", "."]):
-            urls.append((item, int(count)))
+        if item.startswith("url-"):
+            urls.append((item[4:], int(count)))
         else:
-            users.append((item, int(count)))
+            users.append((item[4:], int(count)))
 
     urls.sort(key=itemgetter(1)), users.sort(key=itemgetter(1))
 

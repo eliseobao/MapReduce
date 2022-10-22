@@ -9,7 +9,7 @@ item = None
 for line in sys.stdin:
 
     line = line.strip()
-    item, count = line.split('\t', 1)
+    item, count = line.split('\t')
     count = int(count)
 
     if current_item == item:

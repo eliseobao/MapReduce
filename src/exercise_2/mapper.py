@@ -10,5 +10,5 @@ for line in sys.stdin:
     url = line.split()[3][1:-1]
 
     if '.ps' in url:
-        print('%s\t%s' % (user, 1))
-    print('%s\t%s' % (url, 1))
+        print('%s\t%s' % ('usr-' + user, 1))
+    print('%s\t%s' % ('url-' + url, 1))
