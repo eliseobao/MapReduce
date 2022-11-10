@@ -15,8 +15,9 @@ up: --up/pre
 	docker exec container bash /usr/bin/docker-quickstart && \
 	echo 'Up and ready!'
 
+reduce_tasks = 1
 run:
-	docker exec -i container bash < ./scripts/exercise_$(exercise).sh
+	docker exec -i container bash -c "./src/run_exercise.sh $(exercise) $(reduce_tasks)"
 
 attach:
 	docker attach container
