@@ -53,7 +53,7 @@ Tutorial from: https://www.michael-noll.com/tutorials/writing-an-hadoop-mapreduc
 <details>
   <summary>Exercise 3: Wine quality.</summary>
 
-- Use the data for the two types of wine: `data/exercise_3/winequality-white.csv` and `winequality-red.csv`
+- Use the data for the two types of wine: `winequality-white.csv` and `winequality-red.csv`
   from `data/exercise_3`
   _(source http://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/)_.
 

@@ -2,35 +2,23 @@
 
 import sys
 
-first_execution = True
+results = {}
 
-# input comes from STDIN
 for line in sys.stdin:
-    # remove leading and trailing whitespace
     line = line.strip()
+    wine, attribute, value = line.split('\t')
+    value = float(value)
 
-    # parse the input we got from mapper.py
-    winesubtypeAttribute, value = line.split('\t', 1)
-
-    # convert value (currently a string) to int
-    try:
-        value = float(value)
-    except ValueError:
-        continue
-
-    if first_execution:
-        previous_attribute = winesubtypeAttribute
-        mean = value
-        attributeCounter = 1
-        first_execution = False
-        continue
-
-    if winesubtypeAttribute == previous_attribute:
-        mean += value
-        attributeCounter += 1
+    if wine in results:
+        if attribute in results[wine]:
+            results[wine][attribute].append(value)
+        else:
+            results[wine][attribute] = [value]
     else:
-        mean = mean / attributeCounter
-        print('%s\t%s' % (previous_attribute, mean))
-        previous_attribute = winesubtypeAttribute
-        mean = value
-        attributeCounter = 1
+        results[wine] = {}
+        results[wine][attribute] = [value]
+
+for wine in results:
+    for attribute in results[wine]:
+        mean_value = sum(results[wine][attribute]) / float(len(results[wine][attribute]))
+        print('%s\t%s\t%.4f' % (wine, attribute, mean_value))
