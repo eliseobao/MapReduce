@@ -78,6 +78,8 @@ Tutorial from: https://www.michael-noll.com/tutorials/writing-an-hadoop-mapreduc
 
 </details>
 
+_Note: For the sake of completeness, obtained results have been pushed to `docs/results.txt`_.
+
 ## Usage
 
 Docker container up:
