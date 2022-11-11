@@ -78,8 +78,6 @@ Tutorial from: https://www.michael-noll.com/tutorials/writing-an-hadoop-mapreduc
 
 </details>
 
-_Note: For the sake of completeness, obtained results have been pushed to `docs/results.txt`_.
-
 ## Usage
 
 Docker container up:
@@ -88,10 +86,10 @@ Docker container up:
 make up
 ```
 
-Run exercise $n$, where $n \epsilon \{0, 1, 2, 3\}$:
+Run exercise `n`, where `n` in [0, 1, 2, 3] and `i` denotes the number of reduce tasks per job (default 1):
 
 ```sh
-make run exercise=n
+make run exercise=n [reduce_tasks=i]
 ```
 
 Attach to Docker container:
@@ -111,6 +109,15 @@ Docker container down:
 ```sh
 make down
 ```
+
+## Demo and results
+
+The following video demonstrates the realization of the practice. It shows the commands necessary for the execution of the exercises, as well as the corresponding results. It should be noted that some parts have been sped up to reduce the overall duration.
+
+https://user-images.githubusercontent.com/55492981/201247041-c1a3addf-69ec-4099-af56-1200c76cd271.mp4
+
+_Note: For the sake of completeness, obtained results have been pushed to `docs/results.txt`_.
+
 
 ## License
 
