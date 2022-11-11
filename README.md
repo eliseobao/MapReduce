@@ -114,7 +114,7 @@ make down
 
 The following video demonstrates the realization of the practice. It shows the commands necessary for the execution of the exercises, as well as the corresponding results. It should be noted that some parts have been sped up to reduce the overall duration.
 
-https://user-images.githubusercontent.com/55492981/201247041-c1a3addf-69ec-4099-af56-1200c76cd271.mp4
+[demo.webm](https://user-images.githubusercontent.com/55492981/201249839-7e52dac8-4395-4848-885c-aaa98a287293.webm)
 
 _Note: For the sake of completeness, obtained results have been pushed to `docs/results.txt`_.
 
